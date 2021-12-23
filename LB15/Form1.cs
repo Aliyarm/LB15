@@ -41,20 +41,16 @@ namespace LB15
             Graphics g = e.Graphics;
             // Первый вызов метода и вход в рекурсию
             MyDraw(g, 7, 50, 50);
-            //// Включаем таймер
-            //timer1.Enabled = true;
-            //// Устанавливаем flag в значение true
-            //flag = true;
-            //// Организуем бесконечный цикл
-            //while (flag) ;
-            //// Выключаем таймер после выхода из цикла
-            //timer1.Enabled = false;
         }
 
         // Обработчик тика таймера
         private void timer1_Tick_1(object sender,
         EventArgs e)
         {
+            timer1.Enabled = true;
+            flag = true;
+            while (flag) ;
+            timer1.Enabled = false;
             // Сбрасываем flag в значение false
             flag = false;
         }
